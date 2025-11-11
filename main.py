@@ -1,6 +1,4 @@
 import network
-import socket
-import time
 from machine import Pin, PWM
 from microdot import send_file, Microdot
 from motorController import MotorController
