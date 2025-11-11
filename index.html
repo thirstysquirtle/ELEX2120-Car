@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="/htmx.js"></script>
+    <title>PicoCar??</title>
+</head>
+<body>
+    <section hx-target="#test">
+        <div hx-post="/forward" id="forwardButton"><span>F</span></div>
+        <div hx-post="/stop" id="stopButton"><span>S</span></div>
+        <div hx-post="/left" id="leftButton"><span>L</span></div>
+        <div hx-post="/right" id="rightButton"><span>R</span></div>
+        <div hx-post="/back" id="backButton"><span>B</span></div>
+    </section>
+    <h4 id="test">test</h4>
+</body>
+</html>

@@ -1,0 +1,55 @@
+
+    html {
+        -webkit-user-select: none;
+        user-select: none;
+    }
+    body {
+        background-color: #684A52;
+        display: flex;
+        width: 100%;
+        min-height: 90vh;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+    section {
+        display: grid;
+        grid-template-areas: 
+            'forward forward forward'
+            'left stop right'
+            'back back back'
+            ;
+        gap: 1rem;
+        justify-content: center;
+    }
+    span {
+        position: relative;
+        padding: 2rem;
+        background-color: aliceblue;
+        border-radius: 8px;
+        color: black;
+    }
+    div {
+        display: flex;
+        justify-content: center;
+    }
+    span:hover {
+        cursor: pointer;
+        transform: scale(1.08);
+        border: 1px solid black;
+    }
+    #forwardButton {
+        grid-area: forward;
+    }
+    #backButton {
+        grid-area: back;
+    }
+    #leftButton {
+        grid-area: left;
+    }
+    #rightButton {
+        grid-area: right;
+    }
+    #stopButton {
+        grid-area: stop;
+    }
