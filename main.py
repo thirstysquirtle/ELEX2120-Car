@@ -7,6 +7,7 @@ from motorController import MotorController
 wlan = network.WLAN(network.AP_IF)
 wlan.config(ssid="AlexGaveUp6")
 wlan.config(security=wlan.SEC_OPEN)
+wlan.config(hostname="pi")
 # wlan.config(password="1234567890")
 wlan.active(True)
 
@@ -37,14 +38,15 @@ def css(request):
 # Car-Control Endpoints
 motors = MotorController(16, 17, 15, 14, 13)
 
-forwardLED = Pin(1, Pin.OUT)
-backLED = Pin(2, Pin.OUT)
+forwardLED = Pin(0, Pin.OUT)
+backLED = Pin(1, Pin.OUT)
+
 
 def ledsOff():
     forwardLED.off()
     backLED.off()
 
-spkr = PWM(Pin(3))
+spkr = PWM(Pin(2))
 
 
 @app.post("/forward")

@@ -26,18 +26,18 @@ class MotorController:
     
     def right(self):
         self.enable.off()
-        self.rightBack.off()
-        self.leftForward.off()
-        self.leftBack.on()
-        self.rightForward.on()
-        self.enable.on()
-
-    def left(self):
-        self.enable.off()
         self.leftBack.off()
         self.rightForward.off()
         self.leftForward.on()
         self.rightBack.on()
+        self.enable.on()
+
+    def left(self):
+        self.enable.off()
+        self.rightBack.off()
+        self.leftForward.off()
+        self.leftBack.on()
+        self.rightForward.on()
         self.enable.on()
     
     def stop(self):
